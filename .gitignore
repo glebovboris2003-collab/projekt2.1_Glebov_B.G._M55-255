@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtualenv / Poetry
+.venv/
+
+# Linters / IDE
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project runtime data (must not be committed)
+data/
+logs/
+db_meta.json

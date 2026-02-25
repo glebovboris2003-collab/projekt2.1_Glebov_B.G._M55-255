@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "primitive-db-project"
+version = "1.0.0"
+description = "Реализация примитивной базы данных на Python (хранение в JSON)"
+authors = ["Glebov <rfugu@yandex.ru>"]
+readme = "README.md"
+packages = [
+    { include = "primitive_db", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+prettytable = "^3.10.0"
+prompt = "==0.4.1"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.6.0"
+
+[tool.poetry.scripts]
+# Указываем вызов функции main() из файла main.py
+project = "primitive_db.main:main"
+
+[tool.ruff]
+# Используем стандартную длину строки 88 (как в Black)
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+# Оставляем только самые базовые и необходимые проверки (ошибки, стиль, импорты)
+select = ["E", "F", "I", "W"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

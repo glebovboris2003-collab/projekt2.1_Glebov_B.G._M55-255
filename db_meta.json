@@ -1,0 +1,12 @@
+{
+    "tables": {
+        "users": {
+            "last_id": 1,
+            "schema": {
+                "age": "int",
+                "is_active": "bool",
+                "name": "str"
+            }
+        }
+    }
+}
